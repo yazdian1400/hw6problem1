@@ -102,4 +102,30 @@
                 android:text="Male" />
         </RadioGroup>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/btn_register"
+        android:backgroundTint="#E91E63"
+        android:fontFamily="@font/pointfree"
+        android:text="Register"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:cornerRadius="64dp"
+        app:rippleColor="#FFEB3B" />
+
+    <Button
+        android:id="@+id/btn_show_info"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:backgroundTint="#2196F3"
+        android:fontFamily="@font/pointfree"
+        android:text="Show Info"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:cornerRadius="64dp"
+        app:rippleColor="#FFEB3B" />
+
 </LinearLayout>
