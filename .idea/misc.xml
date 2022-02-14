@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/a_android_maktab/hw6/hw6problem1/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/a_android_maktab/hw6/hw6problem1/app/src/main/res/drawable-v24/bg_rounded.xml" value="0.1" />
+        <entry key="..\:/a_android_maktab/hw6/hw6problem1/app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="..\:/a_android_maktab/hw6/hw6problem1/app/src/main/res/layout/layout.xml" value="0.17481884057971014" />
       </map>
     </option>
   </component>

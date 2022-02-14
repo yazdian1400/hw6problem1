@@ -134,5 +134,20 @@
             app:cornerRadius="64dp"
             app:rippleColor="#FFEB3B" />
 
+        <TextView
+            android:id="@+id/tv_full_name"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bg_rounded"
+            android:fontFamily="@font/pointfree"
+            android:gravity="center_vertical"
+            android:paddingStart="30dp"
+            android:textColor="#E91E63"
+            android:textSize="24sp"
+            android:visibility="invisible"
+            tools:text="Full Name" />
+
     </LinearLayout>
 </ScrollView>
