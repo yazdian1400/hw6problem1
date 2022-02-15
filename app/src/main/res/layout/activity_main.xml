@@ -4,22 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     android:visibility="visible">
+    <!-- android:scrollbars = "vertical"
+    android:scrollbarStyle="insideInset"  -->
+
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         tools:context=".MainActivity">
 
         <EditText
             android:id="@+id/et_full_name"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="56dp"
             android:layout_weight="1"
+            android:autofillHints="Full Name"
             android:ems="10"
             android:fontFamily="@font/pointfree"
-            android:hint="Full name"
+            android:hint="Full Name"
             android:inputType=""
             android:textColor="#000000"
             android:textColorHint="#78909C"
@@ -28,7 +33,7 @@
         <EditText
             android:id="@+id/et_username"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="56dp"
             android:layout_weight="1"
             android:ems="10"
             android:fontFamily="@font/pointfree"
@@ -41,7 +46,7 @@
         <EditText
             android:id="@+id/et_email"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="56dp"
             android:layout_weight="1"
             android:ems="10"
             android:fontFamily="@font/pointfree"
@@ -54,7 +59,7 @@
         <EditText
             android:id="@+id/et_password"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="56dp"
             android:layout_weight="1"
             android:ems="10"
             android:fontFamily="@font/pointfree"
@@ -67,7 +72,7 @@
         <EditText
             android:id="@+id/et_password2"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="56dp"
             android:layout_weight="1"
             android:ems="10"
             android:fontFamily="@font/pointfree"
@@ -87,7 +92,7 @@
 
         <RadioGroup
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="56dp"
             android:orientation="horizontal">
 
             <RadioButton
@@ -111,7 +116,7 @@
         <Button
             android:id="@+id/btn_register"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="56dp"
             android:layout_weight="1"
             android:backgroundTint="#E91E63"
             android:fontFamily="@font/pointfree"
@@ -124,7 +129,7 @@
         <Button
             android:id="@+id/btn_show_info"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="56dp"
             android:layout_weight="1"
             android:backgroundTint="#2196F3"
             android:fontFamily="@font/pointfree"
@@ -134,20 +139,45 @@
             app:cornerRadius="64dp"
             app:rippleColor="#FFEB3B" />
 
-        <TextView
-            android:id="@+id/tv_full_name"
+        <LinearLayout
+            android:id="@+id/layout_show_info"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/bg_rounded"
-            android:fontFamily="@font/pointfree"
-            android:gravity="center_vertical"
-            android:paddingStart="30dp"
-            android:textColor="#E91E63"
-            android:textSize="24sp"
-            android:visibility="invisible"
-            tools:text="Full Name" />
+            android:layout_weight="6"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_full_name"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rounded"
+                android:fontFamily="@font/pointfree"
+                android:gravity="center_vertical"
+                android:paddingStart="30dp"
+                android:textColor="#E91E63"
+                android:textSize="24sp"
+                android:visibility="visible"
+                tools:text="Full Name" />
+
+            <TextView
+                android:id="@+id/tv_username"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rounded"
+                android:fontFamily="@font/pointfree"
+                android:gravity="center_vertical"
+                android:paddingStart="30dp"
+                android:textColor="#E91E63"
+                android:textSize="24sp"
+                android:visibility="visible"
+                tools:text="Username" />
+
+        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>

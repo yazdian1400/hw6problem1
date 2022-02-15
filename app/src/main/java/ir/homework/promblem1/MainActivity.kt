@@ -13,12 +13,12 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        fun onButtonClick(view: View){
-            binding.tvFullName.visibility = View.VISIBLE
+        fun onButtonClick(){
+            binding.layoutShowInfo.visibility = View.VISIBLE
         }
 
         binding.btnRegister.setOnClickListener{
-            onButtonClick(binding.btnRegister)
+            onButtonClick()
         }
     }
 }
