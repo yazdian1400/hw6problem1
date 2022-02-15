@@ -2,6 +2,7 @@ package ir.homework.promblem1
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import ir.homework.promblem1.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -11,5 +12,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        fun onButtonClick(view: View){
+            binding.tvFullName.visibility = View.VISIBLE
+        }
+
+        binding.btnRegister.setOnClickListener{
+            onButtonClick(binding.btnRegister)
+        }
     }
 }
