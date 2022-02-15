@@ -7,12 +7,13 @@
     android:fillViewport="true"
     android:visibility="visible">
     <!-- android:scrollbars = "vertical"
-    android:scrollbarStyle="insideInset"  -->
+    android:scrollbarStyle="insideInset"
+     android:fadingEdge="none"  -->
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="120dp"
         android:orientation="vertical"
         tools:context=".MainActivity">
 
@@ -91,6 +92,7 @@
             android:textStyle="bold" />
 
         <RadioGroup
+            android:id="@+id/radio_Group"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:orientation="horizontal">
@@ -110,6 +112,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:buttonTint="#2196F3"
+                android:checked="false"
                 android:text="Male" />
         </RadioGroup>
 
@@ -142,7 +145,7 @@
         <LinearLayout
             android:id="@+id/layout_show_info"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="500dp"
             android:layout_weight="6"
             android:orientation="vertical"
             android:visibility="gone">
@@ -150,13 +153,14 @@
             <TextView
                 android:id="@+id/tv_full_name"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_rounded"
                 android:fontFamily="@font/pointfree"
                 android:gravity="center_vertical"
                 android:paddingStart="30dp"
+                android:paddingVertical="16dp"
                 android:textColor="#E91E63"
                 android:textSize="24sp"
                 android:visibility="visible"
@@ -165,17 +169,79 @@
             <TextView
                 android:id="@+id/tv_username"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_rounded"
                 android:fontFamily="@font/pointfree"
                 android:gravity="center_vertical"
                 android:paddingStart="30dp"
+                android:paddingVertical="16dp"
                 android:textColor="#E91E63"
                 android:textSize="24sp"
                 android:visibility="visible"
                 tools:text="Username" />
+
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rounded"
+                android:fontFamily="@font/pointfree"
+                android:gravity="center_vertical"
+                android:paddingStart="30dp"
+                android:paddingVertical="16dp"
+                android:textColor="#E91E63"
+                android:textSize="24sp"
+                android:visibility="visible"
+                tools:text="Email" />
+
+            <TextView
+                android:id="@+id/tv_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rounded"
+                android:fontFamily="@font/pointfree"
+                android:gravity="center_vertical"
+                android:paddingStart="30dp"
+                android:paddingVertical="16dp"
+                android:textColor="#E91E63"
+                android:textSize="24sp"
+                android:visibility="visible"
+                tools:text="Password" />
+
+            <TextView
+                android:id="@+id/tv_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rounded"
+                android:fontFamily="@font/pointfree"
+                android:gravity="center_vertical"
+                android:paddingStart="30dp"
+                android:paddingVertical="16dp"
+                android:textColor="#E91E63"
+                android:textSize="24sp"
+                android:visibility="visible"
+                tools:text="Gender" />
+
+            <Button
+                android:id="@+id/btn_hide_info"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:backgroundTint="#E91E63"
+                android:fontFamily="@font/pointfree"
+                android:text="Hide info"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:cornerRadius="64dp"
+                app:rippleColor="#FFEB3B" />
 
         </LinearLayout>
 
