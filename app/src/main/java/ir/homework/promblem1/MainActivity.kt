@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         fun hideInfo(){
-            binding.layoutShowInfo.visibility = View.INVISIBLE
+            binding.layoutShowInfo.visibility = View.GONE
         }
 
         binding.btnRegister.setOnClickListener{
@@ -58,6 +58,9 @@ class MainActivity : AppCompatActivity() {
         }
         binding.btnShowInfo.setOnClickListener{
             showInfo()
+        }
+        binding.btnHideInfo.setOnClickListener{
+            hideInfo()
         }
     }
 }
