@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import ir.homework.promblem1.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -11,6 +12,7 @@ class MainActivity : AppCompatActivity() {
     var pass1 : String? = ""
     var pass2 : String?= ""
     var isFemale = true
+    var isPassTrue = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,8 +30,10 @@ class MainActivity : AppCompatActivity() {
             pass1 = binding.etPassword.text.toString()
             pass2 = binding.etPassword2.text.toString()
             if (pass1 != null && pass2 != null && pass1 == pass2) {
+                isPassTrue = true
                 editor.putString("password",pass1 as String)
             }
+            else    isPassTrue = false
             isFemale = when (binding.radioGroup.checkedRadioButtonId){
                 binding.rbFemale.id -> true
                 binding.rbMale.id -> false
@@ -37,16 +41,21 @@ class MainActivity : AppCompatActivity() {
             }
             editor.putBoolean("isFemale",isFemale)
             editor.commit();
+            if (isPassTrue == false){
+                Toast.makeText(this, "The password repeat does not match!", Toast.LENGTH_LONG).show()
+            }
         }
         fun showInfo(){
-            binding.layoutShowInfo.visibility = View.VISIBLE
-            binding.tvFullName.text = preference.getString("name","")
-            binding.tvUsername.text = preference.getString("username","")
-            binding.tvEmail.text = preference.getString("email","")
-            binding.tvPassword.text = preference.getString("password","")
-            binding.tvGender.text = when (preference.getBoolean("isFemale", true)){
-                true -> "Female"
-                false -> "Male"
+            if (isPassTrue) {
+                binding.layoutShowInfo.visibility = View.VISIBLE
+                binding.tvFullName.text = preference.getString("name", "")
+                binding.tvUsername.text = preference.getString("username", "")
+                binding.tvEmail.text = preference.getString("email", "")
+                binding.tvPassword.text = preference.getString("password", "")
+                binding.tvGender.text = when (preference.getBoolean("isFemale", true)) {
+                    true -> "Female"
+                    false -> "Male"
+                }
             }
         }
         fun hideInfo(){
